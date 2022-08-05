@@ -49,6 +49,11 @@ public class JwtAuthenticationController {
 	@Autowired
 	private RestFB restFb;
 
+	@RequestMapping({ "/test" })
+	public String test() {
+		return "OK";
+	}
+
 	@RequestMapping({ "/hello" })
 	public String hello() {
 		return "Fuck";
