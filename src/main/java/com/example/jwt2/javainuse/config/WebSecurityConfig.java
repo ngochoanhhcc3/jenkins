@@ -51,7 +51,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/login-google").permitAll()
 				.antMatchers("/login-facebook").permitAll()
 				.antMatchers("/register").permitAll()
-				.antMatchers("", "home","/test").permitAll()
+				.antMatchers("/test").permitAll()
+				.antMatchers("").permitAll()
+				.antMatchers("home").permitAll()
 				.antMatchers("/hello", "/hello/**").hasRole("ADMIN")
 				.anyRequest().authenticated().and().
 				exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
